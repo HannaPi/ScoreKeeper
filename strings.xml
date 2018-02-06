@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Board Game Score Keeper</string>
+    <string name="player_1">Me</string>
+    <string name="player_2">Hobbit</string>
+    <string name="plus_1">+ 1 point</string>
+    <string name="minus_1">- 1 point</string>
+    <string name="lost">Lost a life</string>
+    <string name="reset">Reset</string>
+</resources>

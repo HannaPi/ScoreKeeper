@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp"
+    tools:context="com.example.android.scorekeeper.MainActivity">
+<!-- Linear layout for the table with players and buttons adding points -->
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+<!-- Linear layout for Player 1 and buttons adding points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+<!-- Shows the nickname of Player 1 -->
+            <TextView
+                android:id="@+id/player_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="@string/player_1"
+                android:textSize="21sp" />
+<!-- Shows Player 1 score -->
+            <TextView
+                android:id="@+id/player_1_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="0"
+                android:textSize="21sp" />
+<!-- Button that adds 1 point to Player 1 score -->
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="increment_1_p1"
+                android:text="@string/plus_1"
+                android:textSize="21sp" />
+<!-- Button that deducts 1 point from Player 1 score -->
+            <Button
+                android:id="@+id/button_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="decrement_1_p1"
+                android:text="@string/minus_1"
+                android:textSize="21sp" />
+<!-- Button for resetting Player 1 points -->
+            <Button
+                android:id="@+id/lost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="reset_p1"
+                android:text="@string/lost"
+                android:textSize="21sp" />
+        </LinearLayout>
+<!-- Vertical line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_horizontal"/>
+<!-- Linear layout for Player 2 and buttons adding points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+<!-- Shows the nickname of Player 2 -->
+            <TextView
+                android:id="@+id/player_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="@string/player_2"
+                android:textSize="21sp" />
+<!-- Shows Player 2 score -->
+            <TextView
+                android:id="@+id/player_2_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="0"
+                android:textSize="21sp" />
+<!-- Button that adds 1 point to Player 2 score -->
+            <Button
+                android:id="@+id/button_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="increment_1_p2"
+                android:text="@string/plus_1"
+                android:textSize="21sp" />
+<!-- Button that deducts 1 point from Player 2 score -->
+            <Button
+                android:id="@+id/button_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="decrement_1_p2"
+                android:text="@string/minus_1"
+                android:textSize="21sp" />
+<!-- Button for resetting Player 2 points -->
+            <Button
+                android:id="@+id/button_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="reset_p2"
+                android:text="@string/lost"
+                android:textSize="21sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+<!-- Image with a board game -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_1"
+        android:layout_above="@+id/button_7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/game_1" />
+<!-- Button for resetting the whole game -->
+    <Button
+        android:id="@+id/button_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:onClick="reset"
+        android:text="@string/reset"
+        android:textSize="21sp" />
+
+</RelativeLayout>
